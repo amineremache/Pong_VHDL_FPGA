@@ -2,12 +2,13 @@
 Release 14.7 Trace  (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
--n 3 -fastpaths -xml Pong.twx Pong.ncd -o Pong.twr Pong.pcf
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 1L
+-n 3 -fastpaths -xml Pong.twx Pong.ncd -o Pong.twr Pong.pcf -ucf
+Constraints.ucf
 
 Design file:              Pong.ncd
 Physical constraint file: Pong.pcf
-Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-10-13)
+Device,package,speed:     xc6slx16l,csg324,C,-1L (PRELIMINARY 1.10 2013-10-13)
 Report level:             verbose report
 
 Environment Variable      Effect 
@@ -36,7 +37,7 @@ Setup/Hold to clock kb_clk
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-kb_data     |    2.671(F)|      SLOW  |   -0.810(F)|      SLOW  |kb_clk_BUFGP      |   0.000|
+kb_data     |    5.566(F)|      SLOW  |   -0.539(F)|      FAST  |kb_clk_BUFGP      |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -44,7 +45,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    3.560|         |         |         |
+clk            |    6.774|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock kb_clk
@@ -52,11 +53,11 @@ Clock to Setup on destination clock kb_clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-kb_clk         |         |         |         |    3.283|
+kb_clk         |         |         |         |    6.241|
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Sat May 05 15:52:09 2018 
+Analysis completed Sun May 06 18:20:32 2018 
 --------------------------------------------------------------------------------
 
 Trace Settings:

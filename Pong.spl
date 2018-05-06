@@ -1,0 +1,12 @@
+[Inputs]
+clk
+kb_clk
+kb_data
+[Outputs]
+hsync_out
+vsync_out
+red_out
+green_out
+blue_out
+soundPin
+[BiDir]

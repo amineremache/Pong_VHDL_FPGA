@@ -36,8 +36,8 @@ entity Pong is
 		red_out : out STD_LOGIC;
 		green_out : out STD_LOGIC;
 		blue_out : out STD_LOGIC;
---		leftPlayerInput : in STD_LOGIC;
---		rightPlayerInput : in STD_LOGIC;
+		leftPlayerInput : in STD_LOGIC;
+		rightPlayerInput : in STD_LOGIC;
 		soundPin : buffer STD_LOGIC := '0';
 		kb_clk : in STD_LOGIC;
 		kb_data : in STD_LOGIC
@@ -56,6 +56,7 @@ component KeyboardController is
 end component;
 
 signal halfClock : STD_LOGIC;
+signal quartClock : STD_LOGIC;
 signal horizontalPosition : integer range 0 to 800 := 0;
 signal verticalPosition : integer range 0 to 521 := 0;
 signal hsyncEnable : STD_LOGIC;
@@ -167,8 +168,11 @@ begin
 		if clk'event and clk = '1' then
 			halfClock <= not halfClock;
 		end if;
+		if halfClock'event and halfClock = '1' then
+			quartClock <= not quartClock;
+		end if;
 	end process clockScaler;
-	
+		
 	-- Allows Ball movement on clock pulse
 	-- Stops at VGA border	
 	ballMovementClockScaler : process(clk)
@@ -197,9 +201,9 @@ begin
 		end if;
 	end process paddleMovementClockScaler;
 
-	signalTiming : process(halfClock)
+	signalTiming : process(quartClock)
 	begin
-		if halfClock'event and halfClock = '1' then
+		if quartClock'event and quartClock = '1' then
 			if horizontalPosition = 800 then
 				horizontalPosition <= 0;
 				verticalPosition <= verticalPosition + 1;
@@ -215,9 +219,9 @@ begin
 		end if;
 	end process signalTiming;
 	
-	vgaSync : process(halfClock, horizontalPosition, verticalPosition)
+	vgaSync : process(quartClock, horizontalPosition, verticalPosition)
 	begin
-		if halfClock'event and halfClock = '1' then
+		if quartClock'event and quartClock = '1' then
 			if horizontalPosition > 0 and horizontalPosition < 97 then
 				hsyncEnable <= '0';
 			else
@@ -245,7 +249,7 @@ begin
 		end if;
 	end process finishGame;
 	
-	colorSetter : process(photonX, photonY, halfClock)
+	colorSetter : process(photonX, photonY, quartClock)
 	begin
 		-- Paddle handling
 		if gameOver = '1' then
@@ -500,13 +504,14 @@ begin
 	end process ballMovement;
 	
 	-- VGA Controller
-	draw : process(photonX, photonY, halfClock)
+	draw : process(photonX, photonY, quartClock)
 	begin
-		if halfClock'event and halfClock = '1' then
+		if quartClock'event and quartClock = '1' then
 			hsync_out <= hsyncEnable;
 			vsync_out <= vsyncEnable;
 		
 			if (photonX < 640 and photonY < 480) then
+			--if (photonX < 1366 and photonY < 768) then
 				red_out <= color(2);
 				green_out <= color(1);
 				blue_out <= color(0);

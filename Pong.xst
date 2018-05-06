@@ -4,7 +4,7 @@ run
 -ifn Pong.prj
 -ofn Pong
 -ofmt NGC
--p xc6slx16-3-csg324
+-p xc6slx16l-1L-csg324
 -top Pong
 -opt_mode Speed
 -opt_level 1

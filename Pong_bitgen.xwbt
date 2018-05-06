@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Xilinx\Projet\Pong\Pong.ncd
-OUTFILE=C:\Xilinx\Projet\Pong\Pong.bit
-FAMILY=Spartan6
-PART=xc6slx16-3csg324
-WORKINGDIR=C:\Xilinx\Projet\Pong
+INFILE=C:\Xilinx\Projet\Pong_VHDL_FPGA\Pong.ncd
+OUTFILE=C:\Xilinx\Projet\Pong_VHDL_FPGA\Pong.bit
+FAMILY=Spartan6 Lower Power
+PART=xc6slx16l-1lcsg324
+WORKINGDIR=C:\Xilinx\Projet\Pong_VHDL_FPGA
 LICENSE=WebPack
 USER_INFO=210821714_0_0_756

@@ -13,3 +13,52 @@ bitgen -intstyle ise -f Pong.ut Pong.ncd
 xst -intstyle ise -ifn "C:/Xilinx/Projet/Pong/Pong.xst" -ofn "C:/Xilinx/Projet/Pong/Pong.syr" 
 ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Constraints.ucf -p xc6slx16-csg324-3 Pong.ngc Pong.ngd  
 map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Pong_map.ncd Pong.ngd Pong.pcf 
+xst -intstyle ise -ifn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.xst" -ofn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.syr" 
+vhdtdtfi -lib work KeyboardController.vhd -lib work Pong.vhd -prj Pong -o Pong.spl -module Pong -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 Pong.spl C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.sym 
+xst -intstyle ise -ifn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.xst" -ofn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Constraints.ucf -p xc6slx16-csg324-3 Pong.ngc Pong.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Constraints.ucf -p xc6slx16-csg324-3 Pong.ngc Pong.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Pong_map.ncd Pong.ngd Pong.pcf 
+xst -intstyle ise -ifn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.xst" -ofn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Constraints.ucf -p xc6slx16-csg324-3 Pong.ngc Pong.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Pong_map.ncd Pong.ngd Pong.pcf 
+xst -intstyle ise -ifn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.xst" -ofn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.syr" 
+xst -intstyle ise -ifn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.xst" -ofn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Constraints.ucf -p xc6slx16l-csg324-1L Pong.ngc Pong.ngd  
+map -intstyle ise -p xc6slx16l-csg324-1L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Pong_map.ncd Pong.ngd Pong.pcf 
+par -w -intstyle ise -ol high -mt off Pong_map.ncd Pong.ncd Pong.pcf 
+trce -intstyle ise -v 3 -s 1L -n 3 -fastpaths -xml Pong.twx Pong.ncd -o Pong.twr Pong.pcf -ucf Constraints.ucf 
+bitgen -intstyle ise -f Pong.ut Pong.ncd 
+xst -intstyle ise -ifn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.xst" -ofn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Constraints.ucf -p xc6slx16l-csg324-1L Pong.ngc Pong.ngd  
+map -intstyle ise -p xc6slx16l-csg324-1L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Pong_map.ncd Pong.ngd Pong.pcf 
+par -w -intstyle ise -ol high -mt off Pong_map.ncd Pong.ncd Pong.pcf 
+trce -intstyle ise -v 3 -s 1L -n 3 -fastpaths -xml Pong.twx Pong.ncd -o Pong.twr Pong.pcf -ucf Constraints.ucf 
+bitgen -intstyle ise -f Pong.ut Pong.ncd 
+xst -intstyle ise -ifn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.xst" -ofn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.syr" 
+xst -intstyle ise -ifn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.xst" -ofn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.syr" 
+xst -intstyle ise -ifn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.xst" -ofn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.syr" 
+xst -intstyle ise -ifn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.xst" -ofn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.syr" 
+xst -intstyle ise -ifn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.xst" -ofn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Constraints.ucf -p xc6slx16l-csg324-1L Pong.ngc Pong.ngd  
+map -intstyle ise -p xc6slx16l-csg324-1L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Pong_map.ncd Pong.ngd Pong.pcf 
+par -w -intstyle ise -ol high -mt off Pong_map.ncd Pong.ncd Pong.pcf 
+trce -intstyle ise -v 3 -s 1L -n 3 -fastpaths -xml Pong.twx Pong.ncd -o Pong.twr Pong.pcf -ucf Constraints.ucf 
+xst -intstyle ise -ifn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.xst" -ofn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Constraints.ucf -p xc6slx16l-csg324-1L Pong.ngc Pong.ngd  
+map -intstyle ise -p xc6slx16l-csg324-1L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Pong_map.ncd Pong.ngd Pong.pcf 
+par -w -intstyle ise -ol high -mt off Pong_map.ncd Pong.ncd Pong.pcf 
+trce -intstyle ise -v 3 -s 1L -n 3 -fastpaths -xml Pong.twx Pong.ncd -o Pong.twr Pong.pcf -ucf Constraints.ucf 
+xst -intstyle ise -ifn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.xst" -ofn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Constraints.ucf -p xc6slx16l-csg324-1L Pong.ngc Pong.ngd  
+map -intstyle ise -p xc6slx16l-csg324-1L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Pong_map.ncd Pong.ngd Pong.pcf 
+par -w -intstyle ise -ol high -mt off Pong_map.ncd Pong.ncd Pong.pcf 
+trce -intstyle ise -v 3 -s 1L -n 3 -fastpaths -xml Pong.twx Pong.ncd -o Pong.twr Pong.pcf -ucf Constraints.ucf 
+bitgen -intstyle ise -f Pong.ut Pong.ncd 
+xst -intstyle ise -ifn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.xst" -ofn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Constraints.ucf -p xc6slx16l-csg324-1L Pong.ngc Pong.ngd  
+map -intstyle ise -p xc6slx16l-csg324-1L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Pong_map.ncd Pong.ngd Pong.pcf 
+par -w -intstyle ise -ol high -mt off Pong_map.ncd Pong.ncd Pong.pcf 
+trce -intstyle ise -v 3 -s 1L -n 3 -fastpaths -xml Pong.twx Pong.ncd -o Pong.twr Pong.pcf -ucf Constraints.ucf 
+bitgen -intstyle ise -f Pong.ut Pong.ncd 
