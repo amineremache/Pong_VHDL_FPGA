@@ -43,8 +43,8 @@ signal scancodeReady : STD_LOGIC := '0';
 signal scancode : STD_LOGIC_VECTOR(7 downto 0);
 signal breakReceived : STD_LOGIC := '0';
 
-constant keyboardA : STD_LOGIC_VECTOR(7 downto 0) := "00011100";
-constant keyboardY : STD_LOGIC_VECTOR(7 downto 0) := "00011010";
+constant keyboardA : STD_LOGIC_VECTOR(7 downto 0) := "00010101";
+constant keyboardY : STD_LOGIC_VECTOR(7 downto 0) := "00110101";
 constant keyboardK : STD_LOGIC_VECTOR(7 downto 0) := "01000010";
 constant keyboardM : STD_LOGIC_VECTOR(7 downto 0) := "00111010";
 

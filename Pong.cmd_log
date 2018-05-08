@@ -62,3 +62,9 @@ map -intstyle ise -p xc6slx16l-csg324-1L -w -logic_opt off -ol high -t 1 -xt 0 -
 par -w -intstyle ise -ol high -mt off Pong_map.ncd Pong.ncd Pong.pcf 
 trce -intstyle ise -v 3 -s 1L -n 3 -fastpaths -xml Pong.twx Pong.ncd -o Pong.twr Pong.pcf -ucf Constraints.ucf 
 bitgen -intstyle ise -f Pong.ut Pong.ncd 
+xst -intstyle ise -ifn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.xst" -ofn "C:/Xilinx/Projet/Pong_VHDL_FPGA/Pong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Constraints.ucf -p xc6slx16l-csg324-1L Pong.ngc Pong.ngd  
+map -intstyle ise -p xc6slx16l-csg324-1L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Pong_map.ncd Pong.ngd Pong.pcf 
+par -w -intstyle ise -ol high -mt off Pong_map.ncd Pong.ncd Pong.pcf 
+trce -intstyle ise -v 3 -s 1L -n 3 -fastpaths -xml Pong.twx Pong.ncd -o Pong.twr Pong.pcf -ucf Constraints.ucf 
+bitgen -intstyle ise -f Pong.ut Pong.ncd 

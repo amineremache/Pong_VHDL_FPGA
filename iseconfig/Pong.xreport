@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-05-06T15:31:46</DateModified>
+  <DateModified>2018-05-07T14:12:54</DateModified>
   <ModuleName>Pong</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/Xilinx/Projet/Pong_VHDL_FPGA/iseconfig/Pong.xreport</SavedFilePath>

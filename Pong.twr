@@ -37,7 +37,7 @@ Setup/Hold to clock kb_clk
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-kb_data     |    5.566(F)|      SLOW  |   -0.539(F)|      FAST  |kb_clk_BUFGP      |   0.000|
+kb_data     |    6.289(F)|      SLOW  |   -0.773(F)|      FAST  |kb_clk_BUFGP      |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -45,7 +45,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    6.774|         |         |         |
+clk            |    5.947|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock kb_clk
@@ -53,11 +53,11 @@ Clock to Setup on destination clock kb_clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-kb_clk         |         |         |         |    6.241|
+kb_clk         |         |         |         |    6.732|
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Sun May 06 18:20:32 2018 
+Analysis completed Mon May 07 15:12:12 2018 
 --------------------------------------------------------------------------------
 
 Trace Settings:

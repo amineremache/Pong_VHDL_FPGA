@@ -10,7 +10,7 @@ Target Device  : xc6slx16l
 Target Package : csg324
 Target Speed   : -1l
 Mapper Version : spartan6l -- $Revision: 1.55 $
-Mapped Date    : Sun May 06 18:19:21 2018
+Mapped Date    : Mon May 07 15:10:55 2018
 
 Design Summary
 --------------
@@ -22,25 +22,25 @@ Slice Logic Utilization:
     Number used as Latches:                      3
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      1,195 out of   9,112   13%
-    Number used as logic:                    1,181 out of   9,112   12%
-      Number using O6 output only:             829
+  Number of Slice LUTs:                      1,193 out of   9,112   13%
+    Number used as logic:                    1,177 out of   9,112   12%
+      Number using O6 output only:             825
       Number using O5 output only:             121
       Number using O5 and O6:                  231
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   2,176    0%
-    Number used exclusively as route-thrus:     14
-      Number with same-slice register load:      6
+    Number used exclusively as route-thrus:     16
+      Number with same-slice register load:      8
       Number with same-slice carry load:         8
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   443 out of   2,278   19%
+  Number of occupied Slices:                   477 out of   2,278   20%
   Number of MUXCYs used:                       428 out of   4,556    9%
-  Number of LUT Flip Flop pairs used:        1,226
-    Number with an unused Flip Flop:           999 out of   1,226   81%
-    Number with an unused LUT:                  31 out of   1,226    2%
-    Number of fully used LUT-FF pairs:         196 out of   1,226   15%
+  Number of LUT Flip Flop pairs used:        1,232
+    Number with an unused Flip Flop:         1,004 out of   1,232   81%
+    Number with an unused LUT:                  39 out of   1,232    3%
+    Number of fully used LUT-FF pairs:         189 out of   1,232   15%
     Number of unique control sets:              40
     Number of slice register sites lost
       to control set restrictions:             223 out of  18,224    1%
@@ -52,8 +52,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        11 out of     232    4%
-    Number of LOCed IOBs:                       10 out of      11   90%
+  Number of bonded IOBs:                         9 out of     232    3%
+    Number of LOCed IOBs:                        8 out of       9   88%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
@@ -82,9 +82,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                4.29
 
-Peak Memory Usage:  514 MB
-Total REAL time to MAP completion:  37 secs 
-Total CPU time to MAP completion:   36 secs 
+Peak Memory Usage:  515 MB
+Total REAL time to MAP completion:  40 secs 
+Total CPU time to MAP completion:   31 secs 
 
 Table of Contents
 -----------------
@@ -113,10 +113,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net gameOver_G is sourced by a
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network leftPlayerInput_IBUF has no load.
+INFO:LIT:243 - Logical network leftPlayerInput has no load.
 INFO:LIT:395 - The above info message is repeated 1 more times for the following
    (max. 5 shown):
-   rightPlayerInput_IBUF
+   rightPlayerInput
    To see the details of these info messages, please use the -detail switch.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
@@ -127,9 +127,9 @@ INFO:Pack:1720 - Initializing voltage to 0.950 Volts. (default - Range: 0.950 to
    1.050 Volts)
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
-INFO:Place:834 - Only a subset of IOs are locked. Out of 11 IOs, 10 are locked
-   and 1 are not locked. If you would like to print the names of these IOs,
-   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
+INFO:Place:834 - Only a subset of IOs are locked. Out of 9 IOs, 8 are locked and
+   1 are not locked. If you would like to print the names of these IOs, please
+   set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
 INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
@@ -158,11 +158,9 @@ Section 6 - IOB Properties
 | clk                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | green_out                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | hsync_out                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| kb_clk                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| kb_data                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| leftPlayerInput                    | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| kb_clk                             | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
+| kb_data                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
 | red_out                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| rightPlayerInput                   | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | soundPin                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | vsync_out                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+

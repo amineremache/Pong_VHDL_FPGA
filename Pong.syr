@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.25 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.30 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.25 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.30 secs
  
 --> Reading design: Pong.prj
 
@@ -698,15 +698,15 @@ Top Level Output File Name         : Pong.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1920
+# BELS                             : 1917
 #      GND                         : 1
 #      INV                         : 21
 #      LUT1                        : 129
-#      LUT2                        : 93
-#      LUT3                        : 111
-#      LUT4                        : 299
-#      LUT5                        : 238
-#      LUT6                        : 500
+#      LUT2                        : 95
+#      LUT3                        : 108
+#      LUT4                        : 303
+#      LUT5                        : 231
+#      LUT6                        : 501
 #      MUXCY                       : 334
 #      MUXF7                       : 2
 #      VCC                         : 1
@@ -736,14 +736,14 @@ Selected Device : 6slx16lcsg324-1l
 
 Slice Logic Utilization: 
  Number of Slice Registers:             241  out of  18224     1%  
- Number of Slice LUTs:                 1391  out of   9112    15%  
-    Number used as Logic:              1391  out of   9112    15%  
+ Number of Slice LUTs:                 1388  out of   9112    15%  
+    Number used as Logic:              1388  out of   9112    15%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1487
-   Number with an unused Flip Flop:    1246  out of   1487    83%  
-   Number with an unused LUT:            96  out of   1487     6%  
-   Number of fully used LUT-FF pairs:   145  out of   1487     9%  
+ Number of LUT Flip Flop pairs used:   1482
+   Number with an unused Flip Flop:    1241  out of   1482    83%  
+   Number with an unused LUT:            94  out of   1482     6%  
+   Number of fully used LUT-FF pairs:   147  out of   1482     9%  
    Number of unique control sets:        40
 
 IO Utilization: 
@@ -945,11 +945,11 @@ Delay:               14.963ns (Levels of Logic = 9)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDRE:C->Q             3   0.732   1.634  verticalPosition_4_1 (verticalPosition_4_1)
-     LUT5:I0->O            1   0.454   1.121  Msub_GND_6_o_GND_6_o_sub_241_OUT_cy<7>11_SW0 (N195)
+     LUT5:I0->O            1   0.454   1.121  Msub_GND_6_o_GND_6_o_sub_241_OUT_cy<7>11_SW0 (N197)
      LUT5:I2->O           14   0.454   1.330  Msub_GND_6_o_GND_6_o_sub_241_OUT_cy<7>11 (Msub_GND_6_o_GND_6_o_sub_241_OUT_cy<7>)
-     LUT6:I5->O            1   0.430   0.818  Mmux_color<0>138132_SW2 (N209)
+     LUT6:I5->O            1   0.430   0.818  Mmux_color<0>138132_SW2 (N211)
      LUT6:I5->O            4   0.430   1.134  Mmux_color<0>138132 (Mmux_color<0>138132)
-     LUT6:I4->O            1   0.454   1.121  Mmux_color<0>13196_SW0 (N280)
+     LUT6:I4->O            1   0.454   1.121  Mmux_color<0>13196_SW0 (N282)
      LUT4:I1->O            1   0.454   0.818  Mmux_color<0>13196 (Mmux_color<0>13203)
      LUT6:I5->O            1   0.430   1.212  Mmux_color<0>13201 (Mmux_color<0>13208)
      LUT6:I2->O            1   0.454   0.818  Mmux_color<0>13202 (Mmux_color<0>13209)
@@ -1012,27 +1012,26 @@ Delay:               6.530ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'kbController/scancodeReady'
-  Clock period: 6.731ns (frequency: 148.567MHz)
-  Total number of paths / destination ports: 27 / 12
+  Clock period: 5.058ns (frequency: 197.707MHz)
+  Total number of paths / destination ports: 22 / 12
 -------------------------------------------------------------------------
-Delay:               6.731ns (Levels of Logic = 3)
+Delay:               5.058ns (Levels of Logic = 2)
   Source:            kbController/breakReceived (FF)
-  Destination:       kbController/LeftPaddleDirection_31 (FF)
+  Destination:       kbController/RightPaddleDirection_31 (FF)
   Source Clock:      kbController/scancodeReady rising
   Destination Clock: kbController/scancodeReady rising
 
-  Data Path: kbController/breakReceived to kbController/LeftPaddleDirection_31
+  Data Path: kbController/breakReceived to kbController/RightPaddleDirection_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             10   0.732   1.912  kbController/breakReceived (kbController/breakReceived)
-     LUT5:I0->O            3   0.454   0.915  kbController/_n00981 (kbController/_n0098)
-     LUT3:I2->O            1   0.430   1.600  kbController/LeftPaddleDirection_31_glue_set (kbController/LeftPaddleDirection_31_glue_set)
-     LUT6:I0->O            1   0.454   0.000  kbController/LeftPaddleDirection_31_glue_rst (kbController/LeftPaddleDirection_31_glue_rst)
-     FD:D                      0.234          kbController/LeftPaddleDirection_31
+     FDR:C->Q              9   0.732   1.875  kbController/breakReceived (kbController/breakReceived)
+     LUT6:I1->O            3   0.454   1.309  kbController/_n00931 (kbController/_n0093)
+     LUT4:I0->O            1   0.454   0.000  kbController/RightPaddleDirection_31_glue_rst (kbController/RightPaddleDirection_31_glue_rst)
+     FD:D                      0.234          kbController/RightPaddleDirection_31
     ----------------------------------------
-    Total                      6.731ns (2.304ns logic, 4.427ns route)
-                                       (34.2% logic, 65.8% route)
+    Total                      5.058ns (1.874ns logic, 3.184ns route)
+                                       (37.1% logic, 62.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'kb_clk'
@@ -1104,9 +1103,9 @@ Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------+---------+---------+---------+---------+
 ballMovementClock  |   13.644|         |         |         |
 gameOver           |         |   14.945|         |         |
-gameOver_G         |         |    7.628|         |         |
+gameOver_G         |         |    7.022|         |         |
 paddleMovementClock|   13.518|         |         |         |
-soundClock         |    9.461|         |         |         |
+soundClock         |    8.855|         |         |         |
 -------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
@@ -1138,8 +1137,8 @@ Clock to Setup on destination clock kbController/scancodeReady
                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------------+---------+---------+---------+---------+
-kbController/scancodeReady|    6.731|         |         |         |
-kb_clk                    |         |    8.451|         |         |
+kbController/scancodeReady|    5.058|         |         |         |
+kb_clk                    |         |    6.686|         |         |
 --------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock kb_clk
@@ -1183,12 +1182,12 @@ soundClock       |    6.267|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 137.00 secs
-Total CPU time to Xst completion: 136.91 secs
+Total REAL time to Xst completion: 120.00 secs
+Total CPU time to Xst completion: 120.13 secs
  
 --> 
 
-Total memory usage is 640964 kilobytes
+Total memory usage is 640976 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   44 (   0 filtered)

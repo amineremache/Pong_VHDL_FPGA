@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-THEPUNISHER::  Sun May 06 18:20:02 2018
+THEPUNISHER::  Mon May 07 15:11:39 2018
 
 par -w -intstyle ise -ol high -mt off Pong_map.ncd Pong.ncd Pong.pcf 
 
@@ -31,25 +31,25 @@ Slice Logic Utilization:
     Number used as Latches:                      3
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      1,195 out of   9,112   13%
-    Number used as logic:                    1,181 out of   9,112   12%
-      Number using O6 output only:             829
+  Number of Slice LUTs:                      1,193 out of   9,112   13%
+    Number used as logic:                    1,177 out of   9,112   12%
+      Number using O6 output only:             825
       Number using O5 output only:             121
       Number using O5 and O6:                  231
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   2,176    0%
-    Number used exclusively as route-thrus:     14
-      Number with same-slice register load:      6
+    Number used exclusively as route-thrus:     16
+      Number with same-slice register load:      8
       Number with same-slice carry load:         8
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   443 out of   2,278   19%
+  Number of occupied Slices:                   477 out of   2,278   20%
   Number of MUXCYs used:                       428 out of   4,556    9%
-  Number of LUT Flip Flop pairs used:        1,226
-    Number with an unused Flip Flop:           999 out of   1,226   81%
-    Number with an unused LUT:                  31 out of   1,226    2%
-    Number of fully used LUT-FF pairs:         196 out of   1,226   15%
+  Number of LUT Flip Flop pairs used:        1,232
+    Number with an unused Flip Flop:         1,004 out of   1,232   81%
+    Number with an unused LUT:                  39 out of   1,232    3%
+    Number of fully used LUT-FF pairs:         189 out of   1,232   15%
     Number of slice register sites lost
       to control set restrictions:               0 out of  18,224    0%
 
@@ -60,8 +60,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        11 out of     232    4%
-    Number of LOCed IOBs:                       10 out of      11   90%
+  Number of bonded IOBs:                         9 out of     232    3%
+    Number of LOCed IOBs:                        8 out of       9   88%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
@@ -92,37 +92,35 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 6 secs 
-Finished initial Timing Analysis.  REAL time: 6 secs 
+Starting initial Timing Analysis.  REAL time: 7 secs 
+Finished initial Timing Analysis.  REAL time: 7 secs 
 
-WARNING:Par:288 - The signal leftPlayerInput_IBUF has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal rightPlayerInput_IBUF has no load.  PAR will not attempt to route this signal.
 Starting Router
 
 
-Phase  1  : 6077 unrouted;      REAL time: 6 secs 
+Phase  1  : 6096 unrouted;      REAL time: 7 secs 
 
-Phase  2  : 5628 unrouted;      REAL time: 7 secs 
+Phase  2  : 5640 unrouted;      REAL time: 8 secs 
 
-Phase  3  : 2465 unrouted;      REAL time: 9 secs 
+Phase  3  : 2531 unrouted;      REAL time: 10 secs 
 
-Phase  4  : 2465 unrouted; (Par is working to improve performance)     REAL time: 17 secs 
+Phase  4  : 2531 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
 
 Updating file: Pong.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 20 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 13 secs 
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 20 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 13 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 20 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 13 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 20 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 13 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 20 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 23 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 20 secs 
-Total REAL time to Router completion: 20 secs 
-Total CPU time to Router completion: 20 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 23 secs 
+Total REAL time to Router completion: 23 secs 
+Total CPU time to Router completion: 22 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -142,29 +140,29 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net qua | SETUP       |         N/A|    15.827ns|     N/A|           0
-  rtClock_BUFG                              | HOLD        |     0.506ns|            |       0|           0
+  Autotimespec constraint for clock net qua | SETUP       |         N/A|    15.921ns|     N/A|           0
+  rtClock_BUFG                              | HOLD        |     0.617ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net kbC | SETUP       |         N/A|     4.722ns|     N/A|           0
-  ontroller/scancodeReady                   | HOLD        |     0.473ns|            |       0|           0
+  Autotimespec constraint for clock net kb_ | SETUP       |         N/A|     6.732ns|     N/A|           0
+  clk_BUFGP                                 | HOLD        |     0.521ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net kb_ | SETUP       |         N/A|     6.241ns|     N/A|           0
-  clk_BUFGP                                 | HOLD        |     0.495ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     5.947ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     0.532ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     6.774ns|     N/A|           0
-  _BUFGP                                    | HOLD        |     0.536ns|            |       0|           0
+  Autotimespec constraint for clock net hal | SETUP       |         N/A|     2.580ns|     N/A|           0
+  fClock                                    | HOLD        |     0.673ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net hal | SETUP       |         N/A|     2.392ns|     N/A|           0
-  fClock                                    | HOLD        |     0.562ns|            |       0|           0
+  Autotimespec constraint for clock net bal | SETUP       |         N/A|    13.243ns|     N/A|           0
+  lMovementClock_BUFG                       | HOLD        |     0.447ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net bal | SETUP       |         N/A|    13.111ns|     N/A|           0
-  lMovementClock_BUFG                       | HOLD        |     0.488ns|            |       0|           0
+  Autotimespec constraint for clock net kbC | SETUP       |         N/A|     5.716ns|     N/A|           0
+  ontroller/scancodeReady                   | HOLD        |     0.300ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net sou | SETUP       |         N/A|     5.669ns|     N/A|           0
-  ndClock                                   | HOLD        |     0.540ns|            |       0|           0
+  Autotimespec constraint for clock net sou | SETUP       |         N/A|     5.819ns|     N/A|           0
+  ndClock                                   | HOLD        |     0.492ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net pad | SETUP       |         N/A|    11.524ns|     N/A|           0
-  dleMovementClock                          | HOLD        |     0.432ns|            |       0|           0
+  Autotimespec constraint for clock net pad | SETUP       |         N/A|    11.906ns|     N/A|           0
+  dleMovementClock                          | HOLD        |     0.078ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -180,18 +178,16 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-WARNING:Par:283 - There are 2 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+Total REAL time to PAR completion: 24 secs 
+Total CPU time to PAR completion: 23 secs 
 
-Total REAL time to PAR completion: 21 secs 
-Total CPU time to PAR completion: 21 secs 
-
-Peak Memory Usage:  424 MB
+Peak Memory Usage:  425 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 4
+Number of warning messages: 0
 Number of info messages: 2
 
 Writing design to file Pong.ncd
